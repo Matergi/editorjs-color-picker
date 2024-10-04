@@ -1,5 +1,7 @@
 # Color Picker Tool for Editor.js
 
+https://github.com/user-attachments/assets/780b3856-26d8-44af-95d7-9c703211fcd4
+
 ## Installation
 
 Get the package
