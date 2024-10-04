@@ -27,16 +27,11 @@ export default class TextColor implements EditorJS.InlineTool {
 	 */
 	private api: API;
 
-	private button?: HTMLButtonElement = undefined;
-
 	tag = 'SPAN';
 	class = 'cdx-text-color';
 	defaultColor = '#2644FF';
 
-	changed?: boolean = false;
 	lastRange: Range | null = null;
-
-	currentSpan: HTMLElement | null = null;
 
 	colors: string[] = [
 		'#182a4e',
@@ -77,21 +72,18 @@ export default class TextColor implements EditorJS.InlineTool {
 	}
 
 	render() {
-		this.button = document.createElement('button');
+		const button = document.createElement('button');
 
-		this.button.type = 'button';
-		this.button.innerHTML = IconColor;
-		this.button.classList.add(this.api.styles.inlineToolButton);
-		// this.button?.classList.toggle(this.api.styles.inlineToolButtonActive, state);
+		button.type = 'button';
+		button.innerHTML = IconColor;
+		button.classList.add(this.api.styles.inlineToolButton);
+		// button?.classList.toggle(this.api.styles.inlineToolButtonActive, state);
 
-		return this.button;
+		return button;
 	}
 
 	surround(range: Range | null) {
 		this.lastRange = range;
-		if (!this.changed) {
-			return;
-		}
 	}
 
 	wrapAndColor(range: Range | null, color: string) {
