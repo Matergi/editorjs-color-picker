@@ -14,7 +14,7 @@ input[type='color'] {
 	cursor: pointer;
 }
 
-.ce-popover__container {
+.ce-popover--inline .ce-popover--nested .ce-popover__container {
 	width: auto !important;
 	min-width: unset !important;
 }
