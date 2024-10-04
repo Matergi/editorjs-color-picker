@@ -1,0 +1,32 @@
+{
+	"name": "editorjs-color-picker",
+	"version": "1.0.0",
+	"private": false,
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "vite build",
+		"format": "prettier --ignore-path .gitignore -w .",
+		"lint": "eslint --ignore-path .gitignore ./**/*.ts"
+	},
+	"licence": "MIT",
+	"engine": {
+		"npm": ">=8.0.0",
+		"node": ">=16.0.0"
+	},
+	"dependencies": {
+		"@codexteam/icons": "0.3.2",
+		"@editorjs/editorjs": "2.30.6"
+	},
+	"devDependencies": {
+		"@types/node": "22.7.4",
+		"@typescript-eslint/eslint-plugin": "8.8.0",
+		"@typescript-eslint/parser": "8.8.0",
+		"eslint": "9.11.1",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-plugin-prettier": "5.2.1",
+		"prettier": "3.3.3",
+		"typescript": "5.6.2",
+		"vite": "5.4.8",
+		"vite-plugin-dts": "4.2.3"
+	}
+}

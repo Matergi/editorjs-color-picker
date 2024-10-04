@@ -1,0 +1,24 @@
+.cdx-text-color {
+	color: inherit;
+}
+
+input[type='color'] {
+	height: 25px;
+	border: none;
+	padding: 0;
+	width: 45px;
+	border-top-right-radius: 10px;
+	overflow: hidden;
+	border-bottom-left-radius: 10px;
+	margin: 0px;
+	cursor: pointer;
+}
+
+.ce-popover__container {
+	width: auto !important;
+	min-width: unset !important;
+}
+
+.ce-popover--inline .ce-popover--nested .ce-popover__items {
+	width: max-content;
+}
