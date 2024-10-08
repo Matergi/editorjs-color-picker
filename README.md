@@ -31,7 +31,7 @@ var editor = new EditorJS({
 });
 ```
 
-If you don't want the text to retain its colors every time you copy and paste it into the editor, you can use the ColorPickerWithoutSanitize class.
+If you don't want the text to retain its colors every time you copy and paste it into the editor, you can use the `ColorPickerWithoutSanitize` class.
 
 ```javascript
 import { ColorPickerWithoutSanitize } from 'editorjs-color-picker';
@@ -48,6 +48,7 @@ var editor = new EditorJS({
 
   ...
 });
+```
 
 ## Config Params
 
@@ -57,4 +58,3 @@ The Paragraph Tool supports these configuration parameters:
 | ------- | ---------- | --------------------------------------------------- |
 | colors  | `string[]` | (there are default colors) Array of colors you want |
 | columns | `number`   | (default: `7`) Number of columns to display         |
-```
