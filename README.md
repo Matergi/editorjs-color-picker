@@ -10,17 +10,13 @@ Get the package
 yarn add editorjs-color-picker
 ```
 
-Include module at your application
-
-```javascript
-import ColorPicker from 'editorjs-color-picker';
-```
-
 ## Usage
 
 Add a new Tool to the `tools` property of the Editor.js initial config.
 
 ```javascript
+import ColorPicker from 'editorjs-color-picker';
+
 var editor = new EditorJS({
   ...
 
@@ -35,6 +31,24 @@ var editor = new EditorJS({
 });
 ```
 
+If you don't want the text to retain its colors every time you copy and paste it into the editor, you can use the ColorPickerWithoutSanitize class.
+
+```javascript
+import { ColorPickerWithoutSanitize } from 'editorjs-color-picker';
+
+var editor = new EditorJS({
+  ...
+
+  tools: {
+    ...
+    ColorPicker: {
+      class: ColorPickerWithoutSanitize,
+    },
+  }
+
+  ...
+});
+
 ## Config Params
 
 The Paragraph Tool supports these configuration parameters:
@@ -43,3 +57,4 @@ The Paragraph Tool supports these configuration parameters:
 | ------- | ---------- | --------------------------------------------------- |
 | colors  | `string[]` | (there are default colors) Array of colors you want |
 | columns | `number`   | (default: `7`) Number of columns to display         |
+```

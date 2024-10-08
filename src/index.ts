@@ -1,30 +1,19 @@
 import { API } from '@editorjs/editorjs';
 import { IconColor } from '@codexteam/icons';
+
 import './styles.css';
 
-type TextColorConfig = {
+type ColorPickerConfig = {
 	colors: string[];
 	columns: number;
 };
 
-/**
- * @description Constructor arguments for Header
- */
 interface ConstructorArgs {
-	/** Editor.js API */
 	api: API;
-	config: TextColorConfig;
+	config: ColorPickerConfig;
 }
 
-/**
- * @typedef {Object} DelimiterData
- * @description Tool's input and output data format
- */
-export default class TextColor implements EditorJS.InlineTool {
-	/**
-	 * Editor.js API
-	 * @private
-	 */
+export default class ColorPicker implements EditorJS.InlineTool {
 	private api: API;
 
 	tag = 'SPAN';
@@ -132,7 +121,7 @@ export default class TextColor implements EditorJS.InlineTool {
 	 *
 	 * @returns {object}
 	 */
-	static get sanitize() {
+	static get sanitize(): any {
 		return {
 			span: {
 				style: {
@@ -140,5 +129,11 @@ export default class TextColor implements EditorJS.InlineTool {
 				},
 			},
 		};
+	}
+}
+
+export class ColorPickerWithoutSanitize extends ColorPicker {
+	static override get sanitize() {
+		return undefined;
 	}
 }
