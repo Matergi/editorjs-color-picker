@@ -67,7 +67,7 @@ For now, I’m only attaching it here without adding it to the library, as it mi
 
 ```css
 .ce-paragraph span {
-  background-color: transparent !important;
+  background-color: unset !important;
 }
 ```
 If anyone finds a more elegant solution, they can open a PR, and we’ll fix it.
