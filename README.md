@@ -36,7 +36,7 @@ If you don't want the text to retain its colors every time you copy and paste it
 ```javascript
 import { ColorPickerWithoutSanitize } from 'editorjs-color-picker';
 
-var editor = new EditorJS({
+const editor = new EditorJS({
   ...
 
   tools: {
