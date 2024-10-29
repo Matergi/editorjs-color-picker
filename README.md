@@ -17,7 +17,7 @@ Add a new Tool to the `tools` property of the Editor.js initial config.
 ```javascript
 import ColorPicker from 'editorjs-color-picker';
 
-var editor = new EditorJS({
+const editor = new EditorJS({
   ...
 
   tools: {
