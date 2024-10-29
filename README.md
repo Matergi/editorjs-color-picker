@@ -63,12 +63,13 @@ The Paragraph Tool supports these configuration parameters:
 
 If you copy and paste text with a different background color, it adopts the style of the `<span>`.      
 The only solution I’ve found so far, without modifying the paragraph component and its onPaste handler, is to apply this style.      
-For now, I’m only attaching it here without adding it to the library, as it might interfere with other plugins. So, anyone interested should try applying this style:     
+For now, I’m only attaching it here without adding it to the library, as it might interfere with other plugins.     
+So, anyone interested should try applying this style:     
 
 ```css
 .ce-paragraph span {
   background-color: unset !important;
 }
 ```
-If anyone finds a more elegant solution, they can open a PR, and we’ll fix it.
+If anyone finds a more elegant solution, can open a PR, and we’ll fix it.
 
