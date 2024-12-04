@@ -1,4 +1,4 @@
-(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode(".ce-popover--inline .ce-popover--nested .ce-popover__container{width:auto!important;min-width:unset!important}.ce-popover--inline .ce-popover--nested .ce-popover__items{width:max-content}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode(".ce-popover--inline .ce-popover--nested .ce-popover__container{width:min-content!important;min-width:unset!important}.ce-popover--inline .ce-popover--nested .ce-popover__items{width:max-content}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
 var i = Object.defineProperty;
 var r = (l, t, e) => t in l ? i(l, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : l[t] = e;
 var n = (l, t, e) => r(l, typeof t != "symbol" ? t + "" : t, e);
