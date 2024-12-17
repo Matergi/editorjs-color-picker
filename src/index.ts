@@ -66,7 +66,6 @@ export default class ColorPicker implements EditorJS.InlineTool {
 		button.type = 'button';
 		button.innerHTML = IconColor;
 		button.classList.add(this.api.styles.inlineToolButton);
-		// button?.classList.toggle(this.api.styles.inlineToolButtonActive, state);
 
 		return button;
 	}
@@ -91,21 +90,13 @@ export default class ColorPicker implements EditorJS.InlineTool {
 	}
 
 	renderActions() {
-		const gap = 5;
 		const container = document.createElement('div');
-		container.style.display = 'grid';
-		container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(30px, 1fr))';
-		container.style.gap = `${gap}px`;
-		container.style.width =
-			this.colors.length > this.columns
-				? `${30 * this.columns + gap * (this.columns - 1)}px`
-				: `${30 * this.colors.length + gap * (this.colors.length - 1)}px`;
+		container.classList.add('editorjs__color-selector-container');
+		container.style.gridTemplateColumns = `repeat(${this.columns}, 1fr)`;
 
 		this.colors.forEach((colorValue) => {
 			const color = document.createElement('div');
-			color.style.width = '30px';
-			color.style.height = '30px';
-			color.style.cursor = 'pointer';
+			color.classList.add('editorjs__color-selector__container-item');
 			color.style.backgroundColor = colorValue;
 			color.onclick = () => {
 				this.wrapAndColor(this.lastRange, colorValue);
