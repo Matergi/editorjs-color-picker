@@ -67,6 +67,11 @@ export default class ColorPicker implements EditorJS.InlineTool {
 		button.innerHTML = IconColor;
 		button.classList.add(this.api.styles.inlineToolButton);
 
+		button.addEventListener('mousedown', (e) => {
+			// prevent text deselection when clicking the button
+			e.preventDefault();
+		});
+
 		return button;
 	}
 

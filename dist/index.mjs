@@ -38,7 +38,9 @@ class l {
   }
   render() {
     const t = document.createElement("button");
-    return t.type = "button", t.innerHTML = a, t.classList.add(this.api.styles.inlineToolButton), t;
+    return t.type = "button", t.innerHTML = a, t.classList.add(this.api.styles.inlineToolButton), t.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+    }), t;
   }
   surround(t) {
     this.lastRange = t;
