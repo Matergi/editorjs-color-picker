@@ -2,8 +2,8 @@
 var c = Object.defineProperty;
 var i = (n, t, e) => t in n ? c(n, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : n[t] = e;
 var s = (n, t, e) => i(n, typeof t != "symbol" ? t + "" : t, e);
-import { IconColor as a } from "@codexteam/icons";
-class l {
+const l = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M5.24296 11.4075C5.23167 10.6253 5.52446 9.8395 6.12132 9.24264L9.65686 5.70711C10.0474 5.31658 10.6809 5.31693 11.0714 5.70745L16.0205 10.6565C16.2268 10.8629 16.3243 11.1371 16.3126 11.4075M5.24296 11.4075C5.25382 12.1607 5.54661 12.9106 6.12132 13.4853L8 15.364M5.24296 11.4075H11.9565M16.3126 11.4075C16.3022 11.6487 16.205 11.8869 16.0208 12.0711L12.4853 15.6066C11.3137 16.7782 9.41421 16.7782 8.24264 15.6066L8 15.364M16.3126 11.4075H11.9565M8 15.364L11.9565 11.4075"/><path stroke="currentColor" stroke-width="2" d="M20 17.4615C20 18.3112 19.3284 19 18.5 19C17.6716 19 17 18.3112 17 17.4615C17 16.6119 17.9 15.6154 18.5 15C19.1 15.6154 20 16.6119 20 17.4615Z"/></svg>';
+class a {
   constructor(t) {
     s(this, "api");
     s(this, "tag", "SPAN");
@@ -38,7 +38,7 @@ class l {
   }
   render() {
     const t = document.createElement("button");
-    return t.type = "button", t.innerHTML = a, t.classList.add(this.api.styles.inlineToolButton), t.addEventListener("mousedown", (e) => {
+    return t.type = "button", t.innerHTML = l, t.classList.add(this.api.styles.inlineToolButton), t.addEventListener("mousedown", (e) => {
       e.preventDefault();
     }), t;
   }
@@ -75,11 +75,11 @@ class l {
     };
   }
 }
-class p extends l {
+class u extends a {
   static get sanitize() {
   }
 }
 export {
-  p as ColorPickerWithoutSanitize,
-  l as default
+  u as ColorPickerWithoutSanitize,
+  a as default
 };
